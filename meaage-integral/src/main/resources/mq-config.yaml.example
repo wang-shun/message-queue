@@ -1,0 +1,11 @@
+mq:
+   clientType:
+   nameServer:
+   accessKey:
+   secretKey:
+   producer:
+       producerId:
+       producerGroup:
+   consumer:
+       consumerId:
+       topic:
