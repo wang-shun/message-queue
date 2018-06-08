@@ -1,0 +1,16 @@
+/Users/sean/terminus/development/code/mq-client-starter/common/src/main/java/io/terminus/mq/config/MQProducerProperties.java
+/Users/sean/terminus/development/code/mq-client-starter/common/src/main/java/io/terminus/mq/model/UniformEvent.java
+/Users/sean/terminus/development/code/mq-client-starter/common/src/main/java/io/terminus/mq/common/UniformEventPublisher.java
+/Users/sean/terminus/development/code/mq-client-starter/common/src/main/java/io/terminus/mq/model/DefaultUniformEvent.java
+/Users/sean/terminus/development/code/mq-client-starter/common/src/main/java/io/terminus/mq/client/MessageProducer.java
+/Users/sean/terminus/development/code/mq-client-starter/common/src/main/java/io/terminus/mq/config/MQProperties.java
+/Users/sean/terminus/development/code/mq-client-starter/common/src/main/java/io/terminus/mq/exception/MQException.java
+/Users/sean/terminus/development/code/mq-client-starter/common/src/main/java/io/terminus/mq/config/MQConsumerProperties.java
+/Users/sean/terminus/development/code/mq-client-starter/common/src/main/java/io/terminus/mq/config/MQConsumerConfig.java
+/Users/sean/terminus/development/code/mq-client-starter/common/src/main/java/io/terminus/mq/common/BaseUniformEventProcessor.java
+/Users/sean/terminus/development/code/mq-client-starter/common/src/main/java/io/terminus/mq/enums/ClientTypeEnum.java
+/Users/sean/terminus/development/code/mq-client-starter/common/src/main/java/io/terminus/mq/common/UniformEventSubscriber.java
+/Users/sean/terminus/development/code/mq-client-starter/common/src/main/java/io/terminus/mq/init/ConsumerInitiator.java
+/Users/sean/terminus/development/code/mq-client-starter/common/src/main/java/io/terminus/mq/client/UniformEventListener.java
+/Users/sean/terminus/development/code/mq-client-starter/common/src/main/java/io/terminus/mq/component/Subscriber.java
+/Users/sean/terminus/development/code/mq-client-starter/common/src/main/java/io/terminus/mq/utils/JacksonUtils.java
