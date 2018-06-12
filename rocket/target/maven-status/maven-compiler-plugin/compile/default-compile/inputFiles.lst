@@ -1,7 +1,0 @@
-/Users/sean/terminus/development/code/mq-client-starter/rocket/src/main/java/io/terminus/mq/rocket/consumer/TerminusMessageListenerOrderly.java
-/Users/sean/terminus/development/code/mq-client-starter/rocket/src/main/java/io/terminus/mq/rocket/producer/RocketMQPublisher.java
-/Users/sean/terminus/development/code/mq-client-starter/rocket/src/main/java/io/terminus/mq/rocket/consumer/AbstractTerminusMessageListener.java
-/Users/sean/terminus/development/code/mq-client-starter/rocket/src/main/java/io/terminus/mq/rocket/consumer/RocketMQSubscriber.java
-/Users/sean/terminus/development/code/mq-client-starter/rocket/src/main/java/io/terminus/mq/rocket/producer/RocketPublisherHolder.java
-/Users/sean/terminus/development/code/mq-client-starter/rocket/src/main/java/io/terminus/mq/rocket/consumer/TerminusMessageListenerConcurrently.java
-/Users/sean/terminus/development/code/mq-client-starter/rocket/src/main/java/io/terminus/mq/rocket/initial/RocketMQConsumerInitiator.java

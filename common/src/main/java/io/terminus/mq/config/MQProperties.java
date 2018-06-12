@@ -6,7 +6,6 @@ package io.terminus.mq.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
 
 /**
  * @author sean
@@ -14,7 +13,6 @@ import org.springframework.stereotype.Component;
  * @description
  */
 @Data
-@Component
 @ConfigurationProperties("mq")
 public class MQProperties {
 

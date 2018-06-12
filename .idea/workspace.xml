@@ -3,13 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4dbf029b-4ef8-4d67-8027-4b0b5ac8af4d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/io/terminus/mq/config/MQConsumerProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/io/terminus/mq/config/MQConsumerProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/io/terminus/mq/config/MQProducerProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/io/terminus/mq/config/MQProducerProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/integration/src/main/java/io/terminus/mq/integration/client/DefaultMessageProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/integration/src/main/java/io/terminus/mq/integration/client/DefaultMessageProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ons/src/main/java/io/terminus/mq/ons/initial/OnsConsumerInitiator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ons/src/main/java/io/terminus/mq/ons/initial/OnsConsumerInitiator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ons/src/main/java/io/terminus/mq/ons/producer/OnsPublisherHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/ons/src/main/java/io/terminus/mq/ons/producer/OnsPublisherHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rocket/src/main/java/io/terminus/mq/rocket/initial/RocketMQConsumerInitiator.java" beforeDir="false" afterPath="$PROJECT_DIR$/rocket/src/main/java/io/terminus/mq/rocket/initial/RocketMQConsumerInitiator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rocket/src/main/java/io/terminus/mq/rocket/producer/RocketPublisherHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/rocket/src/main/java/io/terminus/mq/rocket/producer/RocketPublisherHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/io/terminus/mq/config/MQConsumerProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/io/terminus/mq/config/MQConsumerProperties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/io/terminus/mq/config/MQProducerProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/io/terminus/mq/config/MQProducerProperties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration/target/classes/io/terminus/mq/integration/client/DefaultMessageProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/integration/target/classes/io/terminus/mq/integration/client/DefaultMessageProducer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ons/target/classes/io/terminus/mq/ons/initial/OnsConsumerInitiator.class" beforeDir="false" afterPath="$PROJECT_DIR$/ons/target/classes/io/terminus/mq/ons/initial/OnsConsumerInitiator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ons/target/classes/io/terminus/mq/ons/producer/OnsPublisherHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/ons/target/classes/io/terminus/mq/ons/producer/OnsPublisherHolder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rocket/target/classes/io/terminus/mq/rocket/initial/RocketMQConsumerInitiator.class" beforeDir="false" afterPath="$PROJECT_DIR$/rocket/target/classes/io/terminus/mq/rocket/initial/RocketMQConsumerInitiator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rocket/target/classes/io/terminus/mq/rocket/producer/RocketPublisherHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/rocket/target/classes/io/terminus/mq/rocket/producer/RocketPublisherHolder.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,29 +47,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MQConsumerProperties.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/src/main/java/io/terminus/mq/config/MQConsumerProperties.java">
+      <file leaf-file-name="DefaultMessageProducer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/integration/src/main/java/io/terminus/mq/integration/client/DefaultMessageProducer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+            <state relative-caret-position="468">
+              <caret line="59" column="9" lean-forward="true" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MQConsumerConfig.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MQConsumerConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/src/main/java/io/terminus/mq/config/MQConsumerConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
               <caret line="34" column="23" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RocketPublisherHolder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocket/src/main/java/io/terminus/mq/rocket/producer/RocketPublisherHolder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -126,13 +120,13 @@
         <option value="$PROJECT_DIR$/common/src/main/java/io/terminus/mq/manager/ConsumerManager.java" />
         <option value="$PROJECT_DIR$/ons/src/main/java/io/terminus/mq/ons/consumer/OnsSubscriber.java" />
         <option value="$PROJECT_DIR$/rocket/src/main/java/io/terminus/mq/rocket/consumer/RocketMQSubscriber.java" />
-        <option value="$PROJECT_DIR$/integration/src/main/java/io/terminus/mq/integration/client/DefaultMessageProducer.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/io/terminus/mq/config/MQConsumerProperties.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/io/terminus/mq/config/MQProducerProperties.java" />
         <option value="$PROJECT_DIR$/rocket/src/main/java/io/terminus/mq/rocket/initial/RocketMQConsumerInitiator.java" />
         <option value="$PROJECT_DIR$/ons/src/main/java/io/terminus/mq/ons/initial/OnsConsumerInitiator.java" />
         <option value="$PROJECT_DIR$/rocket/src/main/java/io/terminus/mq/rocket/producer/RocketPublisherHolder.java" />
         <option value="$PROJECT_DIR$/ons/src/main/java/io/terminus/mq/ons/producer/OnsPublisherHolder.java" />
+        <option value="$PROJECT_DIR$/integration/src/main/java/io/terminus/mq/integration/client/DefaultMessageProducer.java" />
       </list>
     </option>
   </component>
@@ -213,26 +207,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="integration" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="mqclientstarter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mq-client-starter" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
-              <item name="container" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mqclientstarter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mq-client-starter" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
-              <item name="listener" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -242,12 +216,13 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="Defa&#9;FILE&#9;file:///Users/sean/terminus/development/code/mq-client-starter/integration/src/main/java/io/terminus/mq/integration/client/DefaultMessageProducer.java&#10;COnsume&#9;FILE&#9;file:///Users/sean/terminus/development/code/mq-client-starter/ons/src/main/java/io/terminus/mq/ons/initial/OnsConsumerInitiator.java&#10;Rocket&#9;FILE&#9;file:///Users/sean/terminus/development/code/mq-client-starter/rocket/src/main/java/io/terminus/mq/rocket/producer/RocketPublisherHolder.java&#10;RocketSu&#9;FILE&#9;file:///Users/sean/terminus/development/code/mq-client-starter/rocket/src/main/java/io/terminus/mq/rocket/consumer/RocketMQSubscriber.java&#10;COn&#9;FILE&#9;file:///Users/sean/terminus/development/code/mq-client-starter/ons/src/main/java/io/terminus/mq/ons/initial/OnsConsumerInitiator.java&#10;O&#9;FILE&#9;file:///Users/sean/terminus/development/code/mq-client-starter/ons/src/main/java/io/terminus/mq/ons/initial/OnsConsumerInitiator.java&#10;OnsIni&#9;FILE&#9;file:///Users/sean/terminus/development/code/mq-client-starter/ons/src/main/java/io/terminus/mq/ons/initial/OnsConsumerInitiator.java&#10;OnsS&#9;FILE&#9;file:///Users/sean/terminus/development/code/mq-client-starter/ons/src/main/java/io/terminus/mq/ons/consumer/OnsSubscriber.java&#10;DefaultProducer&#9;PSI&#9;JAVA://com.alibaba.rocketmq.client.producer.DefaultMQProducer&#10;ProducerPro&#9;FILE&#9;file:///Users/sean/terminus/development/code/mq-client-starter/common/src/main/java/io/terminus/mq/config/MQProducerProperties.java" />
+    <property name="SearchEverywhereHistoryKey" value="Defau&#9;PSI&#9;JAVA://io.terminus.mq.integration.client.DefaultMessageProducer&#10;Defa&#9;FILE&#9;file:///Users/sean/terminus/development/code/mq-client-starter/integration/src/main/java/io/terminus/mq/integration/client/DefaultMessageProducer.java&#10;COnsume&#9;FILE&#9;file:///Users/sean/terminus/development/code/mq-client-starter/ons/src/main/java/io/terminus/mq/ons/initial/OnsConsumerInitiator.java&#10;Rocket&#9;FILE&#9;file:///Users/sean/terminus/development/code/mq-client-starter/rocket/src/main/java/io/terminus/mq/rocket/producer/RocketPublisherHolder.java&#10;RocketSu&#9;FILE&#9;file:///Users/sean/terminus/development/code/mq-client-starter/rocket/src/main/java/io/terminus/mq/rocket/consumer/RocketMQSubscriber.java&#10;COn&#9;FILE&#9;file:///Users/sean/terminus/development/code/mq-client-starter/ons/src/main/java/io/terminus/mq/ons/initial/OnsConsumerInitiator.java&#10;O&#9;FILE&#9;file:///Users/sean/terminus/development/code/mq-client-starter/ons/src/main/java/io/terminus/mq/ons/initial/OnsConsumerInitiator.java&#10;OnsIni&#9;FILE&#9;file:///Users/sean/terminus/development/code/mq-client-starter/ons/src/main/java/io/terminus/mq/ons/initial/OnsConsumerInitiator.java&#10;OnsS&#9;FILE&#9;file:///Users/sean/terminus/development/code/mq-client-starter/ons/src/main/java/io/terminus/mq/ons/consumer/OnsSubscriber.java&#10;DefaultProducer&#9;PSI&#9;JAVA://com.alibaba.rocketmq.client.producer.DefaultMQProducer&#10;ProducerPro&#9;FILE&#9;file:///Users/sean/terminus/development/code/mq-client-starter/common/src/main/java/io/terminus/mq/config/MQProducerProperties.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="runEclipseCodeFormatter" value="false" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
@@ -336,12 +311,20 @@
       <workItem from="1528423892586" duration="13057000" />
       <workItem from="1528439024757" duration="8735000" />
       <workItem from="1528539422664" duration="2656000" />
-      <workItem from="1528766748928" duration="766000" />
+      <workItem from="1528766748928" duration="1395000" />
     </task>
+    <task id="LOCAL-00001" summary="修改">
+      <created>1528768611869</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1528768611869</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25214000" />
+    <option name="totallyTimeSpent" value="25843000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -358,10 +341,10 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.5785536" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.5785536" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26037195" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26037195" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -382,6 +365,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ons/src/main/java/io/terminus/mq/ons/producer/OnsPublisher.java">
@@ -625,13 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/io/terminus/mq/config/MQConsumerProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ons/src/main/java/io/terminus/mq/ons/consumer/OnsSubscriber.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3531">
@@ -663,13 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/integration/src/main/java/io/terminus/mq/integration/listener/SpringContainerStartupListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="74" column="36" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/io/terminus/mq/client/MessageProducer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -681,13 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
           <caret line="131" column="23" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rocket/src/main/java/io/terminus/mq/rocket/producer/RocketPublisherHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -708,16 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/integration/src/main/java/io/terminus/mq/integration/client/DefaultMessageProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/io/terminus/mq/config/MQProperties.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -725,10 +681,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rocket/src/main/java/io/terminus/mq/rocket/producer/RocketPublisherHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/io/terminus/mq/config/MQConsumerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="23" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/io/terminus/mq/config/MQConsumerProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/integration/src/main/java/io/terminus/mq/integration/listener/SpringContainerStartupListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="74" column="36" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/integration/src/main/java/io/terminus/mq/integration/client/DefaultMessageProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="59" column="9" lean-forward="true" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

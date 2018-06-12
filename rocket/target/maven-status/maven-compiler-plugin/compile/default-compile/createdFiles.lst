@@ -1,7 +1,0 @@
-io/terminus/mq/rocket/producer/RocketPublisherHolder.class
-io/terminus/mq/rocket/producer/RocketMQPublisher.class
-io/terminus/mq/rocket/initial/RocketMQConsumerInitiator.class
-io/terminus/mq/rocket/consumer/AbstractTerminusMessageListener.class
-io/terminus/mq/rocket/consumer/TerminusMessageListenerOrderly.class
-io/terminus/mq/rocket/consumer/TerminusMessageListenerConcurrently.class
-io/terminus/mq/rocket/consumer/RocketMQSubscriber.class
