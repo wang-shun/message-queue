@@ -6,11 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="autoconfiguration" />
         <module name="common" />
         <module name="integration" />
         <module name="ons" />
         <module name="rocket" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="starter" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

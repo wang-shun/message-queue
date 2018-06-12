@@ -13,6 +13,7 @@
         <module>ons</module>
         <module>rocket</module>
         <module>integration</module>
+        <module>autoconfiguration</module>
     </modules>
 
 

@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dbf029b-4ef8-4d67-8027-4b0b5ac8af4d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/integration/src/main/java/io/terminus/mq/integration/autoconfig/MQAutoConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autoconfiguration/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration/src/main/java/io/terminus/mq/integration/autoconfig/MQAutoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/autoconfiguration/src/main/java/io/terminus/mq/autoconfig/MQAutoConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -11,6 +15,8 @@
     <ignored path="$PROJECT_DIR$/ons/target/" />
     <ignored path="$PROJECT_DIR$/rocket/target/" />
     <ignored path="$PROJECT_DIR$/integration/target/" />
+    <ignored path="$PROJECT_DIR$/starter/target/" />
+    <ignored path="$PROJECT_DIR$/autoconfiguration/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,10 +69,31 @@
         </entry>
       </file>
       <file leaf-file-name="MQAutoConfig.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/integration/src/main/java/io/terminus/mq/integration/autoconfig/MQAutoConfig.java">
+        <entry file="file://$PROJECT_DIR$/autoconfiguration/src/main/java/io/terminus/mq/autoconfig/MQAutoConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="238">
+              <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autoconfiguration/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -88,7 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/common/src/main/java/io/terminus/mq/config/MQConsumerConfig.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/io/terminus/mq/enums/ClientTypeEnum.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/io/terminus/mq/rules/Subscriber.java" />
@@ -132,6 +158,9 @@
         <option value="$PROJECT_DIR$/integration/src/main/java/io/terminus/mq/integration/client/DefaultMessageProducer.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/io/terminus/mq/config/MQProperties.java" />
         <option value="$PROJECT_DIR$/integration/src/main/java/io/terminus/mq/integration/autoconfig/MQAutoConfig.java" />
+        <option value="$PROJECT_DIR$/starter/pom.xml" />
+        <option value="$PROJECT_DIR$/autoconfiguration/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -180,37 +209,37 @@
             <path>
               <item name="mqclientstarter" type="b2602c69:ProjectViewProjectNode" />
               <item name="mq-client-starter" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
+              <item name="autoconfiguration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mqclientstarter" type="b2602c69:ProjectViewProjectNode" />
               <item name="mq-client-starter" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
+              <item name="autoconfiguration" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mqclientstarter" type="b2602c69:ProjectViewProjectNode" />
               <item name="mq-client-starter" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mqclientstarter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mq-client-starter" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
+              <item name="autoconfiguration" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mqclientstarter" type="b2602c69:ProjectViewProjectNode" />
               <item name="mq-client-starter" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
+              <item name="autoconfiguration" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mqclientstarter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mq-client-starter" type="462c0819:PsiDirectoryNode" />
+              <item name="autoconfiguration" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="autoconfig" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -316,7 +345,7 @@
       <workItem from="1528423892586" duration="13057000" />
       <workItem from="1528439024757" duration="8735000" />
       <workItem from="1528539422664" duration="2656000" />
-      <workItem from="1528766748928" duration="1829000" />
+      <workItem from="1528766748928" duration="2738000" />
     </task>
     <task id="LOCAL-00001" summary="修改">
       <created>1528768611869</created>
@@ -332,15 +361,21 @@
       <option name="project" value="LOCAL" />
       <updated>1528769507793</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="调整">
+      <created>1528769961745</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1528769961745</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26277000" />
+    <option name="totallyTimeSpent" value="27186000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -380,23 +415,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改" />
+    <MESSAGE value="调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="调整" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/io/terminus/mq/client/MessageProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="47" column="55" selection-start-line="47" selection-start-column="55" selection-end-line="47" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ons/src/main/java/io/terminus/mq/ons/producer/OnsPublisherHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/io/terminus/mq/enums/ClientTypeEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -600,13 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ons/src/main/java/io/terminus/mq/ons/consumer/OnsSubscriber.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3531">
@@ -717,10 +732,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/integration/src/main/java/io/terminus/mq/integration/autoconfig/MQAutoConfig.java">
+    <entry file="file://$PROJECT_DIR$/starter/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="289">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autoconfiguration/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autoconfiguration/src/main/java/io/terminus/mq/autoconfig/MQAutoConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
