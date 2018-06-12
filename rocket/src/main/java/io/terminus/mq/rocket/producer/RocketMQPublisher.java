@@ -13,6 +13,7 @@ import com.alibaba.rocketmq.client.producer.TransactionMQProducer;
 import com.alibaba.rocketmq.common.message.Message;
 import com.alibaba.rocketmq.remoting.exception.RemotingException;
 
+import com.google.common.base.Throwables;
 import io.terminus.mq.common.UniformEventPublisher;
 import io.terminus.mq.exception.MQException;
 import io.terminus.mq.model.DefaultUniformEvent;
@@ -95,7 +96,8 @@ public class RocketMQPublisher implements UniformEventPublisher {
             transactionalProducer.start();
             log.info("启动RocketMQ生产者，Group={}, NameServer={}", this.getGroup(), this.getNameSrvAddress());
         } catch (MQClientException e) {
-            throw new MQException("");
+            log.error("rocketmq start failed,cause:{}", Throwables.getStackTraceAsString(e));
+            throw new MQException("rocketmq start failed");
         }
     }
 

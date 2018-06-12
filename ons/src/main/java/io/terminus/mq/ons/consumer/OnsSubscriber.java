@@ -13,6 +13,7 @@ import com.aliyun.openservices.ons.api.bean.OrderConsumerBean;
 import com.aliyun.openservices.ons.api.bean.Subscription;
 import com.aliyun.openservices.ons.api.order.MessageOrderListener;
 import com.aliyun.openservices.ons.api.order.OrderAction;
+import com.google.common.base.Throwables;
 import io.terminus.mq.client.UniformEventListener;
 import io.terminus.mq.common.UniformEventSubscriber;
 import io.terminus.mq.exception.MQException;
@@ -86,13 +87,18 @@ public class OnsSubscriber implements UniformEventSubscriber, DisposableBean {
 
     @Override
     public void start() throws MQException {
-        Assert.notNull(listener, "统一消息事件监听器UniformEventListener未设置");
-        if (listener.getListenerType() == UniformEventListener.ListenerTypeEnum.CONCURRENTLY) {
-            consumer.start();
-        } else if (listener.getListenerType() == UniformEventListener.ListenerTypeEnum.ORDERLY) {
-            orderConsumer.start();
-        } else {
-            throw new IllegalArgumentException("统一消息事件监听器类型不支持，类型：{}" + listener.getListenerType());
+        try {
+            Assert.notNull(listener, "统一消息事件监听器UniformEventListener未设置");
+            if (listener.getListenerType() == UniformEventListener.ListenerTypeEnum.CONCURRENTLY) {
+                consumer.start();
+            } else if (listener.getListenerType() == UniformEventListener.ListenerTypeEnum.ORDERLY) {
+                orderConsumer.start();
+            } else {
+                throw new IllegalArgumentException("统一消息事件监听器类型不支持，类型：{}" + listener.getListenerType());
+            }
+        } catch (Exception e) {
+            log.error("ons consumer start failed ,cause:{}", Throwables.getStackTraceAsString(e));
+            throw new MQException("ons consumer start failed");
         }
     }
 

@@ -4,14 +4,16 @@
  */
 package io.terminus.mq.autoconfig;
 
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
 /**
  * @author sean
  * @version Id:,v0.1 2018/6/12 上午10:15 sean Exp $
  * @description
  */
-//@Configuration
-//@ComponentScan("io.terminus.mq")
-//@EnableConfigurationProperties({ MQProperties.class, MQProducerProperties.class, MQConsumerProperties.class })
+@Configuration
+@ComponentScan("io.terminus.mq")
 public class MQAutoConfig {
 
 }

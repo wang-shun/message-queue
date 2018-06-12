@@ -5,6 +5,7 @@
 package io.terminus.mq.ons.producer;
 
 import com.aliyun.openservices.ons.api.*;
+import com.google.common.base.Throwables;
 import io.terminus.mq.common.UniformEventPublisher;
 import io.terminus.mq.exception.MQException;
 import io.terminus.mq.model.DefaultUniformEvent;
@@ -50,22 +51,26 @@ public class OnsPublisher implements UniformEventPublisher {
 
     @Override
     public void start() throws MQException {
-
-        // container 实例配置初始化
-        Properties properties = new Properties();
-        //在控制台创建的Producer ID
-        properties.setProperty(PropertyKeyConst.ProducerId, producerId);
-        // AccessKey 阿里云身份验证，在阿里云服务器管理控制台创建
-        properties.setProperty(PropertyKeyConst.AccessKey, accessKey);
-        // SecretKey 阿里云身份验证，在阿里云服务器管理控制台创建
-        properties.setProperty(PropertyKeyConst.SecretKey, secretKey);
-        //设置发送超时时间，单位毫秒
-        properties.setProperty(PropertyKeyConst.SendMsgTimeoutMillis, Integer.toString(sendTimeOut));
-        // 设置 TCP 接入域名
-        properties.setProperty(PropertyKeyConst.ONSAddr, nameServerAddr);
-        producer = ONSFactory.createProducer(properties);
-        // 在发送消息前，必须调用start方法来启动Producer，只需调用一次即可
-        producer.start();
+        try {
+            // container 实例配置初始化
+            Properties properties = new Properties();
+            //在控制台创建的Producer ID
+            properties.setProperty(PropertyKeyConst.ProducerId, producerId);
+            // AccessKey 阿里云身份验证，在阿里云服务器管理控制台创建
+            properties.setProperty(PropertyKeyConst.AccessKey, accessKey);
+            // SecretKey 阿里云身份验证，在阿里云服务器管理控制台创建
+            properties.setProperty(PropertyKeyConst.SecretKey, secretKey);
+            //设置发送超时时间，单位毫秒
+            properties.setProperty(PropertyKeyConst.SendMsgTimeoutMillis, Integer.toString(sendTimeOut));
+            // 设置 TCP 接入域名
+            properties.setProperty(PropertyKeyConst.ONSAddr, nameServerAddr);
+            producer = ONSFactory.createProducer(properties);
+            // 在发送消息前，必须调用start方法来启动Producer，只需调用一次即可
+            producer.start();
+        } catch (Exception e) {
+            log.error("ons mq producer start fail,cause:{}", Throwables.getStackTraceAsString(e));
+            throw new MQException("ons mq producer start fail");
+        }
     }
 
     @Override

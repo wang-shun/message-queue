@@ -4,16 +4,19 @@
  */
 package io.terminus.mq.rocket.consumer;
 
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.util.Assert;
+
 import com.alibaba.rocketmq.client.consumer.DefaultMQPushConsumer;
 import com.alibaba.rocketmq.client.exception.MQClientException;
 import com.alibaba.rocketmq.common.consumer.ConsumeFromWhere;
 import com.alibaba.rocketmq.common.protocol.heartbeat.MessageModel;
+import com.google.common.base.Throwables;
+
 import io.terminus.mq.client.UniformEventListener;
 import io.terminus.mq.common.UniformEventSubscriber;
 import io.terminus.mq.exception.MQException;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.util.Assert;
 
 /**
  * @author sean
@@ -122,6 +125,7 @@ public class RocketMQSubscriber implements UniformEventSubscriber, DisposableBea
             consumer.start();
             log.info("RocketMQ消费者注册成功 nameSrvAddress={}, group={}", nameSrvAddress, group);
         } catch (MQClientException e) {
+            log.error("rocketmq consumer start failed,cause:{}", Throwables.getStackTraceAsString(e));
             throw new MQException(e);
         }
     }
