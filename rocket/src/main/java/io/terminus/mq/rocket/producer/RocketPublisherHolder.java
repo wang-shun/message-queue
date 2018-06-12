@@ -5,6 +5,7 @@
 package io.terminus.mq.rocket.producer;
 
 import io.terminus.mq.config.MQProducerProperties;
+import io.terminus.mq.config.MQProperties;
 import io.terminus.mq.exception.MQException;
 import lombok.Data;
 import org.springframework.beans.factory.DisposableBean;
@@ -23,13 +24,16 @@ public class RocketPublisherHolder implements DisposableBean {
     @Autowired
     private MQProducerProperties producerProperties;
 
+    @Autowired
+    private MQProperties         mqProperties;
+
     private RocketMQPublisher    publisher;
 
     public void init() {
         try {
             String producerGroup = producerProperties.getProducerGroup();
             int timeout = producerProperties.getTimeout();
-            String nameServerAddr = producerProperties.getNameServer();
+            String nameServerAddr = mqProperties.getNameServer();
             int retryTimesWhenFaild = producerProperties.getRetryTimesWhenSendFailed();
             boolean retryOtherBroker = producerProperties.isRetryAnotherBrokerWhenNotStore();
             int maxMessageSize = producerProperties.getMaxMessageSize();

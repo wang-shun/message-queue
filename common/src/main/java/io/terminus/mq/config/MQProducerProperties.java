@@ -14,7 +14,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  */
 @Data
 @ConfigurationProperties("mq.producer")
-public class MQProducerProperties extends MQProperties {
+public class MQProducerProperties {
 
     /** 生产者ID  ons用 */
     private String  producerId;

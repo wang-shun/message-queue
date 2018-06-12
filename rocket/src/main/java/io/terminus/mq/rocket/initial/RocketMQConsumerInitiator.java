@@ -9,6 +9,7 @@ import io.terminus.mq.client.UniformEventListener;
 import io.terminus.mq.common.UniformEventSubscriber;
 import io.terminus.mq.config.MQConsumerConfig;
 import io.terminus.mq.config.MQConsumerProperties;
+import io.terminus.mq.config.MQProperties;
 import io.terminus.mq.exception.MQException;
 import io.terminus.mq.init.ConsumerInitiator;
 import io.terminus.mq.rocket.consumer.RocketMQSubscriber;
@@ -29,6 +30,9 @@ public class RocketMQConsumerInitiator implements ConsumerInitiator {
 
     @Autowired
     private MQConsumerProperties consumerProperties;
+
+    @Autowired
+    private MQProperties         mqProperties;
 
     @Override
     public void onConsumerStartUp(Map<String, UniformEventListener> listeners) {
@@ -53,7 +57,7 @@ public class RocketMQConsumerInitiator implements ConsumerInitiator {
     }
 
     private UniformEventSubscriber createUniformEventSubscriber(MQConsumerConfig config) {
-        String nameServerAddr = consumerProperties.getNameServer();
+        String nameServerAddr = mqProperties.getNameServer();
         String consumerGroup = config.getConsumerGroup();
         int consumeThreadMax = config.getConsumeThreadMax();
         int consumeThreadMin = config.getConsumeThreadMin();

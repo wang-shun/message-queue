@@ -59,7 +59,7 @@ public class DefaultMessageProducer implements MessageProducer {
             return publisher.publishUniformEvent(event);
         }
         publisher = rocketPublisherHolder.getPublisher();
-        Assert.isNull(publisher, "message publisher can not be null");
+        Assert.notNull(publisher, "message publisher can not be null");
         event = publisher.createUniformEvent(topic, eventCode, false, payload);
         return publisher.publishUniformEvent(event);
     }

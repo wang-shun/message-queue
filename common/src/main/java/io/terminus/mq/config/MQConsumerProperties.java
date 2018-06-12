@@ -17,7 +17,7 @@ import java.util.List;
  */
 @Data
 @ConfigurationProperties("mq.consumer")
-public class MQConsumerProperties extends MQProperties {
+public class MQConsumerProperties {
 
     List<MQConsumerConfig> list = Lists.newArrayList();
 }

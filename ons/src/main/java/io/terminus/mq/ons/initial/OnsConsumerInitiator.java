@@ -9,6 +9,7 @@ import io.terminus.mq.client.UniformEventListener;
 import io.terminus.mq.common.UniformEventSubscriber;
 import io.terminus.mq.config.MQConsumerConfig;
 import io.terminus.mq.config.MQConsumerProperties;
+import io.terminus.mq.config.MQProperties;
 import io.terminus.mq.exception.MQException;
 import io.terminus.mq.init.ConsumerInitiator;
 import io.terminus.mq.ons.consumer.OnsSubscriber;
@@ -30,6 +31,9 @@ public class OnsConsumerInitiator implements ConsumerInitiator {
 
     @Autowired
     private MQConsumerProperties consumerProperties;
+
+    @Autowired
+    private MQProperties         mqProperties;
 
     @Override
     public void onConsumerStartUp(Map<String, UniformEventListener> listeners) {
@@ -59,10 +63,10 @@ public class OnsConsumerInitiator implements ConsumerInitiator {
      * @return
      */
     private UniformEventSubscriber createUniformEventSubscriber(MQConsumerConfig config) {
-        String nameServerAddr = consumerProperties.getNameServer();
+        String nameServerAddr = mqProperties.getNameServer();
         String consumerId = config.getConsumerId();
-        String accessKey = consumerProperties.getAccessKey();
-        String secretKey = consumerProperties.getSecretKey();
+        String accessKey = mqProperties.getAccessKey();
+        String secretKey = mqProperties.getSecretKey();
         int consumeThreadNums = config.getConsumeThreadMax();
         return new OnsSubscriber(nameServerAddr, consumerId, accessKey, secretKey, consumeThreadNums);
     }

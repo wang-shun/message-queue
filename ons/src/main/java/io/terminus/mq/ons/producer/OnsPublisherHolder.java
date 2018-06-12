@@ -5,6 +5,7 @@
 package io.terminus.mq.ons.producer;
 
 import io.terminus.mq.config.MQProducerProperties;
+import io.terminus.mq.config.MQProperties;
 import io.terminus.mq.exception.MQException;
 import lombok.Data;
 import org.springframework.beans.factory.DisposableBean;
@@ -23,15 +24,18 @@ public class OnsPublisherHolder implements DisposableBean {
     @Autowired
     private MQProducerProperties producerProperties;
 
+    @Autowired
+    private MQProperties         mqProperties;
+
     private OnsPublisher         onsPublisher;
 
     public void init() {
         try {
             String producerId = producerProperties.getProducerId();
             int timeout = producerProperties.getTimeout();
-            String nameServerAddr = producerProperties.getNameServer();
-            String accessKey = producerProperties.getAccessKey();
-            String secretKey = producerProperties.getSecretKey();
+            String nameServerAddr = mqProperties.getNameServer();
+            String accessKey = mqProperties.getAccessKey();
+            String secretKey = mqProperties.getSecretKey();
 
             onsPublisher = new OnsPublisher(nameServerAddr, producerId, accessKey, secretKey, timeout);
             onsPublisher.start();
