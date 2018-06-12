@@ -238,6 +238,6 @@ public class OnsSubscriber implements UniformEventSubscriber, DisposableBean {
 
     @Override
     public void destroy() throws Exception {
-        shutdown();
+        this.shutdown();
     }
 }

@@ -102,11 +102,11 @@ public class RocketMQSubscriber implements UniformEventSubscriber, DisposableBea
         consumer.setConsumeFromWhere(getConsumeFromWhere());
         consumer.setMessageModel(getMessageModel());
 
-        consumer.setConsumeThreadMax(getConsumeThreadMax());
-        consumer.setConsumeThreadMin(getConsumeThreadMin());
-        consumer.setPullBatchSize(getPullBatchSize());
-        consumer.setPullInterval(getPullInterval());
-        consumer.setPullThresholdForQueue(getPullThresholdForQueue());
+        consumer.setConsumeThreadMax(this.getConsumeThreadMax());
+        consumer.setConsumeThreadMin(this.getConsumeThreadMin());
+        consumer.setPullBatchSize(this.getPullBatchSize());
+        consumer.setPullInterval(this.getPullInterval());
+        consumer.setPullThresholdForQueue(this.getPullThresholdForQueue());
 
         // register listener
         if (listener.getListenerType() == UniformEventListener.ListenerTypeEnum.CONCURRENTLY) {
@@ -293,6 +293,6 @@ public class RocketMQSubscriber implements UniformEventSubscriber, DisposableBea
 
     @Override
     public void destroy() throws Exception {
-        shutdown();
+        this.shutdown();
     }
 }
