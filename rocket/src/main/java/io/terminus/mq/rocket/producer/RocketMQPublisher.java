@@ -102,21 +102,48 @@ public class RocketMQPublisher implements UniformEventPublisher {
     @Override
     public UniformEvent createUniformEvent(String topic, String eventCode) {
         UniformEvent e = new DefaultUniformEvent(topic, eventCode);
+        e.setTimeout(timeout);
+        return e;
+    }
+
+    @Override
+    public UniformEvent createUniformEvent(String topic, String eventCode, long timeout) {
+        UniformEvent e = new DefaultUniformEvent(topic, eventCode);
+        e.setTimeout(timeout);
         return e;
     }
 
     @Override
     public UniformEvent createUniformEvent(String topic, String eventCode, boolean transactional) {
         UniformEvent e = new DefaultUniformEvent(topic, eventCode);
+        e.setTimeout(timeout);
         e.setTransactional(transactional);
+        return e;
+    }
+
+    @Override
+    public UniformEvent createUniformEvent(String topic, String eventCode, boolean transactional, long timeout) {
+        UniformEvent e = new DefaultUniformEvent(topic, eventCode);
+        e.setTransactional(transactional);
+        e.setTimeout(timeout);
+        return e;
+    }
+
+    @Override
+    public UniformEvent createUniformEvent(String topic, String eventCode, boolean transactional, Object payload, long timeout) {
+        UniformEvent e = new DefaultUniformEvent(topic, eventCode);
+        e.setTimeout(timeout);
+        e.setTransactional(transactional);
+        e.setPayload(payload);
         return e;
     }
 
     @Override
     public UniformEvent createUniformEvent(String topic, String eventCode, boolean transactional, Object payload) {
         UniformEvent e = new DefaultUniformEvent(topic, eventCode);
-        e.setTransactional(transactional);
         e.setPayload(payload);
+        e.setTimeout(timeout);
+        e.setTransactional(transactional);
         return e;
     }
 

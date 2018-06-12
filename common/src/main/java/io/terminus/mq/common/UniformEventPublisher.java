@@ -13,7 +13,7 @@ import io.terminus.mq.model.UniformEvent;
  * @version Id:,v0.1 2018/6/8 下午12:09 sean Exp $
  * @description
  */
-public interface UniformEventPublisher extends BaseUniformEventProcessor{
+public interface UniformEventPublisher extends BaseUniformEventProcessor {
 
     /**
      * 发布统一消息事件
@@ -46,10 +46,29 @@ public interface UniformEventPublisher extends BaseUniformEventProcessor{
      *
      * @param topic 主题
      * @param eventCode 事件码
+     * @return
+     */
+    UniformEvent createUniformEvent(String topic, String eventCode, long timeout);
+
+    /**
+     * 创建统一消息事件
+     *
+     * @param topic 主题
+     * @param eventCode 事件码
      * @param transactional 事务消息
      * @return
      */
     UniformEvent createUniformEvent(String topic, String eventCode, boolean transactional);
+
+    /**
+     * 创建统一消息事件
+     *
+     * @param topic 主题
+     * @param eventCode 事件码
+     * @param transactional 事务消息
+     * @return
+     */
+    UniformEvent createUniformEvent(String topic, String eventCode, boolean transactional, long timeout);
 
     /**
      *
@@ -61,5 +80,16 @@ public interface UniformEventPublisher extends BaseUniformEventProcessor{
      * @return
      */
     UniformEvent createUniformEvent(String topic, String eventCode, boolean transactional, Object payload);
+
+    /**
+     *
+     *
+     * @param topic 主题
+     * @param eventCode 事件码
+     * @param transactional 事务消息
+     * @param payload 消息体
+     * @return
+     */
+    UniformEvent createUniformEvent(String topic, String eventCode, boolean transactional, Object payload, long timout);
 
 }

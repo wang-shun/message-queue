@@ -45,6 +45,6 @@ public interface MessageProducer {
      * @return
      * @throws MQException
      */
-    //boolean send(String topic, String eventCode, Object payload, long timeout) throws MQException;
+    boolean send(String topic, String eventCode, Object payload, long timeout) throws MQException;
 
 }

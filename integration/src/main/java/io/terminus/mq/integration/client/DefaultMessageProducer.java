@@ -64,6 +64,22 @@ public class DefaultMessageProducer implements MessageProducer {
         return publisher.publishUniformEvent(event);
     }
 
+    @Override
+    public boolean send(String topic, String eventCode, Object payload, long timeout) throws MQException {
+        UniformEvent event = null;
+        UniformEventPublisher publisher = null;
+        if (isOns()) {
+            publisher = onsPublisherHolder.getOnsPublisher();
+            Assert.isNull(publisher, "message publisher can not be null");
+            event = publisher.createUniformEvent(topic, eventCode, false, payload, timeout);
+            return publisher.publishUniformEvent(event);
+        }
+        publisher = rocketPublisherHolder.getPublisher();
+        Assert.notNull(publisher, "message publisher can not be null");
+        event = publisher.createUniformEvent(topic, eventCode, false, payload, timeout);
+        return publisher.publishUniformEvent(event);
+    }
+
     private boolean isOns() {
         return StringUtils.endsWithIgnoreCase(mqProperties.getClientType(), ClientTypeEnum.ons.name());
     }

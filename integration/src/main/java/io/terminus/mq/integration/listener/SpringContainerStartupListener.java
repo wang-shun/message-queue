@@ -5,13 +5,11 @@
 package io.terminus.mq.integration.listener;
 
 import io.terminus.mq.config.MQProperties;
-import io.terminus.mq.enums.ClientTypeEnum;
 import io.terminus.mq.integration.container.ListenerContainer;
 import io.terminus.mq.ons.initial.OnsConsumerInitiator;
 import io.terminus.mq.ons.producer.OnsPublisherHolder;
 import io.terminus.mq.rocket.initial.RocketMQConsumerInitiator;
 import io.terminus.mq.rocket.producer.RocketPublisherHolder;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
@@ -45,18 +43,18 @@ public class SpringContainerStartupListener implements ApplicationListener<Conte
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        //1.先注册监听器到容器中
-        container.init();
-
-        //2.判断是配置了哪种mq方式
-        String clientType = mqProperties.getClientType();
-
-        //3.启动生产者 注册消费者
-        if (StringUtils.equalsIgnoreCase(clientType, ClientTypeEnum.ons.name())) {
-            onsStartUp();
-        } else {
-            rocketMqStartUp();
-        }
+//        //1.先注册监听器到容器中
+//        container.init();
+//
+//        //2.判断是配置了哪种mq方式
+//        String clientType = mqProperties.getClientType();
+//
+//        //3.启动生产者 注册消费者
+//        if (StringUtils.equalsIgnoreCase(clientType, ClientTypeEnum.ons.name())) {
+//            onsStartUp();
+//        } else {
+//            rocketMqStartUp();
+//        }
     }
 
     private void rocketMqStartUp() {

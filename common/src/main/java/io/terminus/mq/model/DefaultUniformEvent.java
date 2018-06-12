@@ -4,6 +4,8 @@
  */
 package io.terminus.mq.model;
 
+import java.util.UUID;
+
 /**
  * @author sean
  * @version Id:,v0.1 2018/6/6 下午8:55 sean Exp $
@@ -39,7 +41,7 @@ public class DefaultUniformEvent implements UniformEvent {
     public DefaultUniformEvent(String topic, String eventCode) {
         this.topic = topic;
         this.eventCode = eventCode;
-        //        this.id = UUIDGenerator.getInstance().generateTimeBasedUUID().toString();  todo
+        this.id = UUID.randomUUID().toString();
     }
 
     @Override

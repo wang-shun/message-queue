@@ -122,13 +122,40 @@ public class OnsPublisher implements UniformEventPublisher {
 
     @Override
     public UniformEvent createUniformEvent(String topic, String eventCode) {
-        return new DefaultUniformEvent(topic, eventCode);
+        UniformEvent e = new DefaultUniformEvent(topic, eventCode);
+        e.setTimeout(sendTimeOut);
+        return e;
+    }
+
+    @Override
+    public UniformEvent createUniformEvent(String topic, String eventCode, long timeout) {
+        UniformEvent e = new DefaultUniformEvent(topic, eventCode);
+        e.setTimeout(timeout);
+        return e;
     }
 
     @Override
     public UniformEvent createUniformEvent(String topic, String eventCode, boolean transactional) {
         UniformEvent e = new DefaultUniformEvent(topic, eventCode);
         e.setTransactional(transactional);
+        e.setTimeout(sendTimeOut);
+        return e;
+    }
+
+    @Override
+    public UniformEvent createUniformEvent(String topic, String eventCode, boolean transactional, long timeout) {
+        UniformEvent e = new DefaultUniformEvent(topic, eventCode);
+        e.setTransactional(transactional);
+        e.setTimeout(timeout);
+        return e;
+    }
+
+    @Override
+    public UniformEvent createUniformEvent(String topic, String eventCode, boolean transactional, Object payload, long timeout) {
+        UniformEvent e = new DefaultUniformEvent(topic, eventCode);
+        e.setTransactional(transactional);
+        e.setPayload(payload);
+        e.setTimeout(timeout);
         return e;
     }
 
@@ -136,6 +163,7 @@ public class OnsPublisher implements UniformEventPublisher {
     public UniformEvent createUniformEvent(String topic, String eventCode, boolean transactional, Object payload) {
         UniformEvent e = new DefaultUniformEvent(topic, eventCode);
         e.setTransactional(transactional);
+        e.setTimeout(sendTimeOut);
         e.setPayload(payload);
         return e;
     }
