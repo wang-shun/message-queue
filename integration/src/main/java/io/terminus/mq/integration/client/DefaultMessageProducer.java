@@ -85,7 +85,7 @@ public class DefaultMessageProducer implements MessageProducer {
         UniformEventPublisher publisher = null;
         if (this.isOns()) {
             publisher = this.onsPublisherHolder.getOnsPublisher();
-            Assert.isNull(publisher, "message publisher can not be null");
+            Assert.notNull(publisher, "message publisher can not be null");
             event = publisher.createUniformEvent(topic, eventCode, false, payload, timeout);
             event.setDelayTimeLevel(delayTimeLevel);
             return publisher.publishUniformEvent(event);
