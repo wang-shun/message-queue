@@ -47,4 +47,5 @@ public interface MessageProducer {
      */
     boolean send(String topic, String eventCode, Object payload, long timeout) throws MQException;
 
+    boolean send(String var1, String var2, Object var3, long var4, int var6) throws MQException;
 }

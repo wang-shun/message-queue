@@ -26,10 +26,10 @@ import org.springframework.util.Assert;
 public class DefaultMessageProducer implements MessageProducer {
 
     @Autowired
-    private MQProperties          mqProperties;
+    private MQProperties mqProperties;
 
     @Autowired
-    private OnsPublisherHolder    onsPublisherHolder;
+    private OnsPublisherHolder onsPublisherHolder;
 
     @Autowired
     private RocketPublisherHolder rocketPublisherHolder;
@@ -79,6 +79,25 @@ public class DefaultMessageProducer implements MessageProducer {
         event = publisher.createUniformEvent(topic, eventCode, false, payload, timeout);
         return publisher.publishUniformEvent(event);
     }
+
+    public boolean send(String topic, String eventCode, Object payload, long timeout, int delayTimeLevel) throws MQException {
+        UniformEvent event = null;
+        UniformEventPublisher publisher = null;
+        if (this.isOns()) {
+            publisher = this.onsPublisherHolder.getOnsPublisher();
+            Assert.isNull(publisher, "message publisher can not be null");
+            event = publisher.createUniformEvent(topic, eventCode, false, payload, timeout);
+            event.setDelayTimeLevel(delayTimeLevel);
+            return publisher.publishUniformEvent(event);
+        } else {
+            publisher = this.rocketPublisherHolder.getPublisher();
+            Assert.notNull(publisher, "message publisher can not be null");
+            event = publisher.createUniformEvent(topic, eventCode, false, payload, timeout);
+            event.setDelayTimeLevel(delayTimeLevel);
+            return publisher.publishUniformEvent(event);
+        }
+    }
+
 
     private boolean isOns() {
         return StringUtils.endsWithIgnoreCase(mqProperties.getClientType(), ClientTypeEnum.ons.name());
