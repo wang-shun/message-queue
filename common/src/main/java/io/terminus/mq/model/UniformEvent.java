@@ -5,6 +5,7 @@
 package io.terminus.mq.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author sean
@@ -79,6 +80,20 @@ public interface UniformEvent extends Serializable {
      * @return
      */
     int getDelayTimeLevel();
+
+    /**
+     * 设置延时消息等级
+     *
+     * @param date
+     */
+    void setScheduleTime(Date date);
+
+    /**
+     * 获取延时消息等级
+     *
+     * @return
+     */
+    Date getScheduleTime();
 
     /**
      * 设置是否是事务性消息

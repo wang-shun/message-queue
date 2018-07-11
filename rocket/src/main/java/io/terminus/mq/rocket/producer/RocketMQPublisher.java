@@ -12,7 +12,6 @@ import com.alibaba.rocketmq.client.producer.SendStatus;
 import com.alibaba.rocketmq.client.producer.TransactionMQProducer;
 import com.alibaba.rocketmq.common.message.Message;
 import com.alibaba.rocketmq.remoting.exception.RemotingException;
-
 import com.google.common.base.Throwables;
 import io.terminus.mq.common.UniformEventPublisher;
 import io.terminus.mq.exception.MQException;
@@ -215,6 +214,9 @@ public class RocketMQPublisher implements UniformEventPublisher {
 
             Message message = new Message(event.getTopic(), event.getEventCode(), data);
 
+            if (event.getDelayTimeLevel() > 0) {
+                message.setDelayTimeLevel(event.getDelayTimeLevel());
+            }
             return message;
         } catch (Exception e) {
             throw new MQException("构建RocketMQ 消息实体失败");

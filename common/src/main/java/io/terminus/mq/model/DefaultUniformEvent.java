@@ -4,6 +4,7 @@
  */
 package io.terminus.mq.model;
 
+import java.util.Date;
 import java.util.UUID;
 
 /**
@@ -30,6 +31,9 @@ public class DefaultUniformEvent implements UniformEvent {
 
     /** 延时消息等级 */
     private int     delayTimeLevel;
+
+    /** 延时消息等级 */
+    private Date    scheduleTime;
 
     /** 是否是事务消息 */
     private boolean transactional;
@@ -104,6 +108,16 @@ public class DefaultUniformEvent implements UniformEvent {
     @Override
     public int getDelayTimeLevel() {
         return delayTimeLevel;
+    }
+
+    @Override
+    public void setScheduleTime(Date date) {
+        this.scheduleTime = date;
+    }
+
+    @Override
+    public Date getScheduleTime() {
+        return scheduleTime;
     }
 
     @Override

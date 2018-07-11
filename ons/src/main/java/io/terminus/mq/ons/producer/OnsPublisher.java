@@ -7,6 +7,7 @@ package io.terminus.mq.ons.producer;
 import com.aliyun.openservices.ons.api.*;
 import com.google.common.base.Throwables;
 import io.terminus.mq.common.UniformEventPublisher;
+import io.terminus.mq.enums.DelayTimeLevelEnum;
 import io.terminus.mq.exception.MQException;
 import io.terminus.mq.model.DefaultUniformEvent;
 import io.terminus.mq.model.UniformEvent;
@@ -23,22 +24,34 @@ import java.util.Properties;
 @Slf4j
 public class OnsPublisher implements UniformEventPublisher {
 
-    /** 注册中心地址 */
-    private String   nameServerAddr;
+    /**
+     * 注册中心地址
+     */
+    private String nameServerAddr;
 
-    /** 生产者Id */
-    private String   producerId;
+    /**
+     * 生产者Id
+     */
+    private String producerId;
 
-    /** accessKey */
-    private String   accessKey;
+    /**
+     * accessKey
+     */
+    private String accessKey;
 
-    /** secretKey */
-    private String   secretKey;
+    /**
+     * secretKey
+     */
+    private String secretKey;
 
-    /** 发送的超时时间 */
-    private int      sendTimeOut;
+    /**
+     * 发送的超时时间
+     */
+    private int sendTimeOut;
 
-    /** 生产者Id */
+    /**
+     * 生产者Id
+     */
     private Producer producer;
 
     public OnsPublisher(String nameServerAddr, String producerId, String accessKey, String secretKey, int sendTimeOut) {
@@ -91,7 +104,6 @@ public class OnsPublisher implements UniformEventPublisher {
     }
 
     /**
-     *
      * @param event
      * @return
      * @throws MQException
@@ -102,6 +114,16 @@ public class OnsPublisher implements UniformEventPublisher {
             byte[] data = JacksonUtils.toJson(event.getPayload()).getBytes();
 
             Message message = new Message(event.getTopic(), event.getEventCode(), data);
+
+            if (event.getDelayTimeLevel() > 0) {
+                Long sendTime = System.currentTimeMillis() + DelayTimeLevelEnum.getEnumByLevel(event.getDelayTimeLevel()).getTimeDelay();
+                message.setStartDeliverTime(sendTime);
+            }
+            if(event.getScheduleTime()!=null){
+                Long scheduleTime = event.getScheduleTime().getTime();
+                message.setStartDeliverTime(scheduleTime);
+            }
+
 
             return message;
         } catch (Exception e) {
