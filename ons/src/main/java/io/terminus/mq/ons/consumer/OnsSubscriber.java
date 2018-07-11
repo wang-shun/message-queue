@@ -78,7 +78,7 @@ public class OnsSubscriber implements UniformEventSubscriber, DisposableBean {
 
     private void initProperties() {
         properties = new Properties();
-        properties.put(PropertyKeyConst.NAMESRV_ADDR, nameServerAddr);
+        properties.put(PropertyKeyConst.ONSAddr, nameServerAddr);
         properties.put(PropertyKeyConst.ConsumerId, consumerId);
         properties.put(PropertyKeyConst.AccessKey, accessKey);
         properties.put(PropertyKeyConst.SecretKey, secretKey);
