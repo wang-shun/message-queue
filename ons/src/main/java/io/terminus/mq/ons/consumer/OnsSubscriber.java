@@ -222,7 +222,8 @@ public class OnsSubscriber implements UniformEventSubscriber, DisposableBean {
 
         // 因为在生产者端设定了每次只投递一条消息，所以这里只获取第一条消息进行处理
         String payload = new String(message.getBody());
-        UniformEvent event = new DefaultUniformEvent(message.getTopic(), message.getUserProperties("__TAG"));
+
+        UniformEvent event = new DefaultUniformEvent(message.getTopic(), message.getTag());
         event.setPayload(payload);
 
         return event;

@@ -36,10 +36,10 @@ public class ListenerContainer {
                 for (UniformEventListener bean : beans.values()) {
 
                     // 判断类上是否有次注解  
-                    boolean clzHasAnno = bean.getClass().isAnnotationPresent(Subscriber.class);
+                   /* boolean clzHasAnno = bean.getClass().isAnnotationPresent(Subscriber.class);
                     if (!clzHasAnno) {
                         throw new IllegalArgumentException("listener has not register topic");
-                    }
+                    }*/
                     // 获取类上的注解  
                    // Subscriber annotation = bean.getClass().getAnnotation(Subscriber.class);
                     // 输出注解上的属性  
