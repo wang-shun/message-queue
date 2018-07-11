@@ -8,6 +8,7 @@ import com.google.common.collect.Maps;
 import io.terminus.mq.client.UniformEventListener;
 import io.terminus.mq.component.Subscriber;
 import lombok.Data;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
@@ -40,9 +41,16 @@ public class ListenerContainer {
                         throw new IllegalArgumentException("listener has not register topic");
                     }
                     // 获取类上的注解  
-                    Subscriber annotation = bean.getClass().getAnnotation(Subscriber.class);
+                   // Subscriber annotation = bean.getClass().getAnnotation(Subscriber.class);
                     // 输出注解上的属性  
-                    String topic = annotation.topic();
+                    //String topic = annotation.topic();
+
+                    //获取listener实例中指定的的topic
+                    String topic = bean.getTopic();
+                    if(StringUtils.isBlank(topic)){
+                        throw new IllegalArgumentException("listener has not identified topic");
+                    }
+
                     listeners.put(topic, bean);
                 }
             } catch (IllegalArgumentException e) {

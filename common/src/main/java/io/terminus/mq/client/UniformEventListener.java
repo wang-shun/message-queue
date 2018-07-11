@@ -31,4 +31,6 @@ public interface UniformEventListener {
     enum ListenerTypeEnum {
                            CONCURRENTLY, ORDERLY
     }
+
+    String getTopic();
 }
