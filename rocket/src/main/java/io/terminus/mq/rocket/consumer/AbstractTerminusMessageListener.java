@@ -33,7 +33,7 @@ public abstract class AbstractTerminusMessageListener {
         // 因为在生产者端设定了每次只投递一条消息，所以这里只获取第一条消息进行处理
         MessageExt message = msgs.get(0);
         String payload = new String(message.getBody());
-        UniformEvent event = new DefaultUniformEvent(message.getTopic(), message.getTags());
+        UniformEvent event = new DefaultUniformEvent(message.getTopic(), message.getTags(),message.getMsgId());
         event.setPayload(payload);
 
         return event;

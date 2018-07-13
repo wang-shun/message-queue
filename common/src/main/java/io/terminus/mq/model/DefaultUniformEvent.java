@@ -42,6 +42,12 @@ public class DefaultUniformEvent implements UniformEvent {
      * @param topic
      * @param eventCode
      */
+    public DefaultUniformEvent(String topic, String eventCode, String msgId) {
+        this.topic = topic;
+        this.eventCode = eventCode;
+        this.id = msgId;
+    }
+
     public DefaultUniformEvent(String topic, String eventCode) {
         this.topic = topic;
         this.eventCode = eventCode;

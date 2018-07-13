@@ -96,7 +96,7 @@ public class OnsPublisher implements UniformEventPublisher {
 
         try {
             SendResult sendResult = producer.send(message);
-            log.info("消息发送，消息Id:{}，RocketMQ消息：{}", sendResult.getMessageId(), JacksonUtils.toJson(event.getPayload()));
+            log.info("消息发送，消息Id:{}，ONS消息：{}", sendResult.getMessageId(), JacksonUtils.toJson(event.getPayload()));
             return true;
         } catch (RuntimeException e) {
             throw new MQException(e);
@@ -140,7 +140,7 @@ public class OnsPublisher implements UniformEventPublisher {
 
         try {
             producer.sendOneway(message);
-            log.info("Oneway消息发送成功，RocketMQ消息：{}", JacksonUtils.toJson(event.getPayload()));
+            log.info("Oneway消息发送成功，ONS消息：{}", JacksonUtils.toJson(event.getPayload()));
             return true;
         } catch (RuntimeException e) {
             throw new MQException(e);
